@@ -1,9 +1,11 @@
 import requests
 import json
+import urllib3
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def login(url,username,password):
-    url = "https://{url}/api/aaaLogin.json".format(url=url)
+    url = "https://{address}/api/aaaLogin.json".format(address=url)
 
     prepayload={
         "aaaUser": {
