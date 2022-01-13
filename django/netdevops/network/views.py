@@ -11,6 +11,7 @@ logging.warning("Log message goes here.")
 logging.error("Log message goes here.")
 logging.critical("Log message goes here.")
 """
+logger = logging.getLogger('django')
 
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 # Create your views here.
@@ -23,7 +24,7 @@ def monthly(request, month):
 def monthlyNumbers(request, month):
     #for i in range(len(months)):
     #    if month == i+1:
-    logging.debug('debug message')
-    logging.debug(str(type(month)))
+    logger.debug('debug message')
+    logger.debug(str(type(month)))
     newVar = str(type(month))
     return HttpResponse(f"{newVar}-{month}")

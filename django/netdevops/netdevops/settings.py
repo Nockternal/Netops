@@ -123,3 +123,29 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+LOGGING = {
+    'version': 1,
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'level':'DEBUG',
+        }
+        },
+    'handlers': {
+        'file':{
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename':'./logs/netdevops.log',
+            'formatter':'simpleRe'
+        }
+        },
+    'formatters': {
+        'simpleRe': {
+            'format':'{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style':'{',
+        }
+    }
+}
