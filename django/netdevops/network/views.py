@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import logging
+import sys
 
 """
 logging.basicConfig(level=logging.INFO) # Here
@@ -22,5 +23,6 @@ def monthly(request, month):
 def monthlyNumbers(request, month):
     #for i in range(len(months)):
     #    if month == i+1:
+    print(sys.stderr, 'Goodbye, cruel world!')
     newVar = str(type(month))
-    return HttpResponse(f"{month}{newVar}")
+    return HttpResponse(f"{newVar}-{month}")
