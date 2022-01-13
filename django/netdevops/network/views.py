@@ -6,8 +6,5 @@ months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augus
 def monthly(request, month):
     # for lopp over months checling months
     for i in months:
-        if month.lower() == i:
+        if month.lower() == i.lower():
             return HttpResponse(f"{month}")
-        elif month == i:
-            return HttpResponse(f"{month}")
-
