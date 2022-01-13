@@ -10,6 +10,6 @@ def monthly(request, month):
             return HttpResponse(f"{i}")
 
 def monthlyNumbers(request, month):
-    for i in range(months):
-        if month == 1:
-            return HttpResponse(f"{i} - {months[i]}")
+    for i in range(len(months)):
+        if month == i+1:
+            return HttpResponse(f"{months[i]}")
