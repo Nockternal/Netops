@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+# path('network/', include('network.urls')), network.urls where network is the app name/ folder and urls is the urls.py file in that folder
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('network/', include('network.urls')),
 ]
