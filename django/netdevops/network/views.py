@@ -22,9 +22,6 @@ def monthly(request, month):
             return HttpResponse(f"{i}")
 
 def monthlyNumbers(request, month):
-    #for i in range(len(months)):
-    #    if month == i+1:
-    logger.debug('debug message')
-    logger.debug(str(type(month)))
-    newVar = str(type(month))
-    return HttpResponse(f"{newVar}-{month}")
+    for i in range(len(months)):
+        if int(month) == i+1:
+            return HttpResponse(f"{month}")
