@@ -18,6 +18,7 @@ from django.urls import path, include
 
 
 # path('network/', include('network.urls')), network.urls where network is the app name/ folder and urls is the urls.py file in that folder
+# this path includes main urls so each individual path doesn not need to be added here
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('network/', include('network.urls')),

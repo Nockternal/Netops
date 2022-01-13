@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 # Create your views here.
-def index(request):
-    return HttpResponse('This is up')
-    #return render(request, 'network/pages/index.html')
-    
-def commands(request):
-    return HttpResponse('commands')
-    #return render(request, 'network/pages/commands.html')
+def monthly(request, month):
+    # for lopp over months checling months
+    for i in months:
+        if month == i:
+            return HttpResponse(f"{month}")
 
-def january(request):
-    return HttpResponse('january')
