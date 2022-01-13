@@ -20,8 +20,6 @@ def monthly(request, month):
             return HttpResponse(f"{i}")
 
 def monthlyNumbers(request, month):
-    logging.info(type(month))
-    logging.info(month)
     #for i in range(len(months)):
     #    if month == i+1:
-    return HttpResponse(month)
+    return HttpResponse(type(month))
