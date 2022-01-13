@@ -11,7 +11,7 @@ logging.warning("Log message goes here.")
 logging.error("Log message goes here.")
 logging.critical("Log message goes here.")
 """
-logger = logging.getLogger('django')
+
 
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 # Create your views here.
