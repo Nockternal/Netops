@@ -4,7 +4,12 @@ from django.http import HttpResponse
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 # Create your views here.
 def monthly(request, month):
-    # for lopp over months checling months
+    # for loop over months checling months
     for i in months:
         if month.lower() == i.lower():
-            return HttpResponse(f"{month}")
+            return HttpResponse(f"{i}")
+
+def monthlyNumbers(request, month):
+    for i in range(months):
+        if month == 1:
+            return HttpResponse(f"{i} - {months[i]}")
