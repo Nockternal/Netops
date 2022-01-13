@@ -22,4 +22,5 @@ def monthly(request, month):
 def monthlyNumbers(request, month):
     #for i in range(len(months)):
     #    if month == i+1:
-    return HttpResponse(f"{month}{type(month)}")
+    newVar = str(type(month))
+    return HttpResponse(f"{month}{newVar}")
