@@ -3,23 +3,30 @@ from django.http import HttpResponse
 import logging
 import sys
 
-"""
-logging.basicConfig(level=logging.INFO) # Here
-logging.debug("Log message goes here.")
-logging.info("Log message goes here.")
-logging.warning("Log message goes here.")
-logging.error("Log message goes here.")
-logging.critical("Log message goes here.")
-"""
-
-
+monthly_challenges = {
+    'January': 'challenge-1',
+    'February': 'challenge-2',
+    'March': 'challenge-3',
+    'April': 'challenge-4',
+    'May': 'challenge-5',
+    'June': 'challenge-6',
+    'July': 'challenge-7',
+    'August': 'challenge-8',
+    'September': 'challenge-9',
+    'October': 'challenge-10',
+    'November': 'challenge-11',
+    'December': 'challenge-12'
+}
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 # Create your views here.
 def monthly(request, month):
     # for loop over months checling months
-    for i in months:
-        if month.lower() == i.lower():
-            return HttpResponse(f"{i}")
+    try:
+        monthly_challenges[month]
+    except:
+        for i in months:
+            if month.lower() == i.lower():
+                return HttpResponse(f"{i}")
 
 def monthlyNumbers(request, month):
     for i in range(len(months)):
