@@ -55,4 +55,4 @@ pytest-runner-py3-mock-server-django-cors-middleware-django-cors-response-middle
 pytest-runner-py3-mock-server-django-cors-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware==0.1.0
 pytest-runner-py3-mock-server-django-cors-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware==0.1.0
 pytest-runner-py3-mock-server-django-cors-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware-django-cors-response-middleware==0.1.0
-psycopg2==2.6.1
+
