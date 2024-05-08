@@ -35,12 +35,12 @@ def login(url, username, password):
         token['APIC-Cookie']= data["imdata"][0]["aaaLogin"]["attributes"]["token"]
         #print(json.dumps(data, indent=4, sort_keys=True))
         return token
-    except:
-        print('Error occured')
+    except Exception as e:
+        print(f'Error occured: {e}')
     
 
 if __name__ == '__main__':
     url = 'sandboxapicdc.cisco.com'
     username = 'admin'
-    password = 'ciscopsdt'
+    password = '!v3G@!4@Y'#'ciscopsdt'
     print(login(url, username, password))
